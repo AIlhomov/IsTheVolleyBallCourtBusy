@@ -1,0 +1,32 @@
+/* style.css */
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 20%;
+    color: white;
+    
+  }
+  
+.yes {
+    background-color: red; /* Background color for "Yes" */
+}
+
+.no {
+    background-color: green; /* Background color for "No" */
+}
+
+.answer {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+@media (max-width: 768px) {
+    .answer {
+        font-size: 24px;
+    }
+}
+
+h1 {
+    font-size: 100px;
+}
