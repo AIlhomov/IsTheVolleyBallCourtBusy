@@ -1,15 +1,20 @@
 # app.rb
 
 require 'sinatra' # require the sinatra gem
+require 'sinatra/reloader' if development? # require the sinatra reloader gem if in development mode
 
-set :views, File.dirname(__FILE__) + '/views/volleyball/pages' # set the views directory
+require_relative 'src/helpers' # require the helpers file in src folder
 
-def get_result
-    ['Yes', 'No'].sample # return a random result
-end  
+set :public_folder, File.dirname(__FILE__) + '/public'
+set :views, File.dirname(__FILE__) + '/views/volleyball/pages'
+
+ 
+
 
 get '/' do # define a route (root route)
-  @result = get_result # get a random result
+    @title = title
+    @result = get_result
+    @time = format_time(Time.now)
 
-  erb :index # render the index.erb file
+    erb :index # render the index.erb file
 end
