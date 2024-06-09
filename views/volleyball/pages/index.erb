@@ -1,11 +1,7 @@
----
-layout: default
----
+<%= erb :'../partials/header' %>
 
-<!-- views/volleyball/pages/index.erb -->
+<div class="answer <%= @result.downcase %>">
+  <h1><%= @result %></h1>
+</div>
 
-<=% include_relative '../../../_layouts/header.erb' %=>
-
-<body class="<=% @result.downcase %=>">
-  <h1> <=% @result %=> </h1>
-</body>
+<%= erb :'../partials/footer' %>
