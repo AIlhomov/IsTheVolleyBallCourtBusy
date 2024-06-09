@@ -1,9 +1,11 @@
+---
+layout: default
+---
+
 <!-- views/volleyball/pages/index.erb -->
 
-<%= erb :'../partials/header' %>
+<=% include_relative '../../../_layouts/header.erb' %=>
 
-<body class="<%= @result.downcase %>">
-  <h1> <%= @result %> </h1>                          <!-- This is the result of the coin flip -->
+<body class="<=% @result.downcase %=>">
+  <h1> <=% @result %=> </h1>
 </body>
-
-<!-- Include any other content or partials below -->

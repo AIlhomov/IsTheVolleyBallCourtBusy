@@ -8,13 +8,10 @@ require_relative 'src/helpers' # require the helpers file in src folder
 set :public_folder, File.dirname(__FILE__) + '/public'
 set :views, File.dirname(__FILE__) + '/views/volleyball/pages'
 
- 
 
 
 get '/' do # define a route (root route)
     @title = title
     @result = get_result
-    @time = format_time(Time.now)
 
-    erb :index # render the index.erb file
 end
